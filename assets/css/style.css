@@ -1,0 +1,128 @@
+/******   reset  *******/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/********************/
+/*** GENERALITES  ***/
+/********************/
+html {
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  background: #0e0e0e;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/********************/
+/****** Navbar ******/
+/********************/
+
+nav {
+  display: flex;
+  width: 100vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #141414;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  gap: 1.5%;
+  padding: 0 15px;
+}
+
+.nav_link {
+  position: relative;
+}
+.nav_link span {
+  color: coral;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  transition: 0.2s;
+  font-weight: 700;
+  will-change: transform;
+  display: inline-block;
+  line-height: 15px;
+  font-family: "Spartan", sans-serif;
+}
+.n1 span {
+  transform-origin: bottom;
+}
+.n2 span {
+  transform-origin: top;
+  transform: translateY(100%) rotateX(-90deg);
+}
+.n2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav_link:hover .n1 span {
+  transform: translateY(-100%) rotateX(-90deg);
+}
+.nav_link:hover .n2 span {
+  transform: translateY(0%) rotateX(0deg);
+}
+
+/* .nav_link::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid coral;
+  width: 0px;
+  border-radius: 10px;
+  margin: 2px auto 0 auto;
+  transition: 0.3s ease-in-out;
+}
+.nav_link:hover::after {
+  width: 100%;
+} */
+
+/*******************/
+/****** Title ******/
+/*******************/
+.title {
+  position: relative;
+}
+.title span {
+  color: coral;
+  font-size: clamp(8rem, 15vw, 15rem);
+  transition: 0.3s;
+  font-weight: 100;
+  will-change: transform;
+  display: inline-block;
+  font-family: "Abril Fatface", cursive;
+}
+.s1 span {
+  transform-origin: bottom;
+}
+.s2 span {
+  transform-origin: top;
+  transform: translateY(100%) rotateX(-90deg);
+}
+.s2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.title:hover .s1 span {
+  transform: translateY(-100%) rotateX(-90deg);
+}
+.title:hover .s2 span {
+  transform: translateY(0%) rotateX(0deg);
+}
