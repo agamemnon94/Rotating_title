@@ -47,12 +47,12 @@ nav ul {
   gap: 1.5%;
   padding: 0 15px;
 }
-
+nav ul li {
+}
 .nav_link {
   position: relative;
 }
 .nav_link span {
-  color: coral;
   font-size: clamp(1.4rem, 3vw, 2rem);
   transition: 0.2s;
   font-weight: 700;
@@ -60,11 +60,15 @@ nav ul {
   display: inline-block;
   line-height: 15px;
   font-family: "Spartan", sans-serif;
+  background: transparent;
 }
 .n1 span {
+  color: coral;
   transform-origin: bottom;
 }
 .n2 span {
+  color: lightskyblue;
+  text-shadow: 0px 0px 17px #f1f1f1;
   transform-origin: top;
   transform: translateY(100%) rotateX(-90deg);
 }
